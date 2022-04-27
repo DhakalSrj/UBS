@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginVertical="20dp"
+    android:layout_marginLeft="20dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_image"
+        android:layout_width="100dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/pizza"
+        app:civ_border_color="#fff"
+        app:civ_border_width="3dp" />
+
+    <TextView
+        android:id="@+id/name_text"
+        android:layout_width="275dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginHorizontal="110dp"
+        android:layout_marginVertical="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_toEndOf="@+id/profile_image"
+        android:fontFamily="@font/nunito_sans_bold_italic"
+        android:text="@string/free_pizza" />
+
+    <TextView
+        android:id="@+id/status_text"
+        android:layout_width="275dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginHorizontal="115dp"
+        android:layout_marginVertical="70dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_toEndOf="@+id/profile_image"
+        android:fontFamily="@font/nunito_sans_bold_italic"
+        android:text="@string/textview"
+        tools:text="Sign up for an event and enjoy free pizza at ERB 101!!" />
+</RelativeLayout>

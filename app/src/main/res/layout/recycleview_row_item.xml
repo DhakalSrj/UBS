@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/ivPlace"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="-4dp"
+        android:layout_marginTop="52dp"
+        android:contentDescription="@string/event_image"
+        android:scaleType="centerCrop"
+        android:src="@drawable/utae1" />
+
+    <TextView
+        android:id="@+id/tvPlaceName"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/ivPlace"
+        android:layout_marginTop="8dp"
+        android:padding="5dp"
+        android:textSize="20sp"
+        android:textStyle="bold|italic" />
+
+    <Button
+        android:id="@+id/btnShare"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvPlaceName"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/custom_button"
+        android:text="@string/share" />
+
+    <Button
+        android:id="@+id/btnVisit"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvPlaceName"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="6dp"
+        android:layout_toEndOf="@+id/btnShare"
+        android:background="@drawable/custom_button"
+
+        android:text="@string/visit" />
+
+</RelativeLayout>
