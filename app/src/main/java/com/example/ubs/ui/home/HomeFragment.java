@@ -28,7 +28,7 @@ import com.google.firebase.database.Query;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment  {
 
     private FragmentHomeBinding binding;
     public EditText mSearchField;
@@ -82,7 +82,7 @@ public class HomeFragment extends Fragment {
     @SuppressLint("NotifyDataSetChanged")
     private void firebaseUserSearch(String searchText){
         Toast.makeText(context,"Started Search",Toast.LENGTH_LONG).show();
-        Query firebaseSearchQuery =mUserDatabase.orderByChild("name").equalTo(searchText);
+        Query firebaseSearchQuery =mUserDatabase.orderByChild("name").startAt(searchText).endAt(searchText + "\uf8ff");
 
        FirebaseRecyclerOptions<Users> options =new FirebaseRecyclerOptions.Builder<Users>()
                 .setQuery(firebaseSearchQuery,Users.class)
@@ -100,6 +100,7 @@ public class HomeFragment extends Fragment {
             @Override
             protected void onBindViewHolder(@NonNull UserViewHolder holder, int position, @NonNull Users model) {
                     holder.setDetails(context,model.getName(),model.getStatus(), model.getImage());
+
             }
         };
         firebaseRecyclerAdapter.startListening();

@@ -1,11 +1,19 @@
 package com.example.ubs;
 
 
+import androidx.annotation.NonNull;
+
 public class Users {
 
     private String name, image,status;
 
     public Users(){}
+
+    public Users(String name, String image, String status) {
+        this.name = name;
+        this.image = image;
+        this.status = status;
+    }
 
     public String getName() {
         return name;
@@ -31,9 +39,5 @@ public class Users {
         this.status = status;
     }
 
-    public Users(String name, String image, String status) {
-        this.name = name;
-        this.image = image;
-        this.status = status;
-    }
+
 }
